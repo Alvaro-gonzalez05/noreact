@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #D9D9D9;
+}
+.menu{
+    list-style: none;
+    padding: 0px;
+    background: #b6b6b0;
+    max-width: 1000px;
+    margin:auto;
+    border-radius: 50px;
+    display: flex ;
+    flex-direction: row ;
+    justify-content:space-evenly ;
+    align-items:center;
+  
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+    padding: 13px;
+   
+    
+}
+.menu li {
+    border-radius: 20px;
+    margin: .5rem;
+}
+
+.Home_Barnav:hover{
+    background-color: #777574;
+}
+.Menu_Barnav:hover{
+    background-color: #777574;
+
+}
+.staff_Barnav:hover{
+    background-color: #777574;
+
+}
+
+.carritoImg {
+    max-width: 40px;
+    max-height: 40px;
+}
+.loginImg{
+  max-width: 35px;
+  max-height: 35px;
+
+}
+
+
+.Home_Barnav,.Menu_Barnav,.staff_Barnav{
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    margin-left: 3rem;
+
+    
+
+}
+
+.iconos{
+ 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+   
+
+
+}   
+.carritoImg:hover{
+    scale: 1.2;
+}
+.loginImg:hover{
+    scale: 1.2;
+    
+}
+
+
+.barnav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10rem;
+}
+.logogif{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+.gif{
+    width: 30%;
+    height: 30%;
+}
+.circulo1{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: black;
+    animation: movimiento 5s linear infinite;
+
+}
+.circulo2{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: black;
+    animation: movimiento 5s linear infinite;
+   
+    
+}
+.circulo3{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: black;
+    animation: movimiento 5s linear infinite;
+
+}
+
+.b1{
+    font-family: aloja;
+   
+}
+.burbujas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.burbuja{
+    margin: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: black;
+    opacity: .3;
+    
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    animation: burbujas 3s linear infinite;
+}
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: .4;
+
+    }
+    100%{
+        bottom: 100vh;
+    }
+}
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
