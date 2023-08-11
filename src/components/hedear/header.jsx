@@ -30,14 +30,20 @@ export default function Header() {
             <img src={gift} alt="" class="gif"/>
         </div>
        <div class="burbujas"> 
-    
-            <img src={burbujaCafeteria} alt=""class="circulo1"/>
-            <img src={burbujaRestobar} alt=""class="circulo2"/>
-            <img src={burbujaSobrenosotros} alt=""class="circulo3"/>
+
+            <div className="divBurbujaTexto">
+                <img src={burbujaCafeteria} alt=""class="circulo1"/>
+                <p className="textoBurbuja1">ADSADSDASD</p>
+            </div>
+            <div>
+                <img src={burbujaRestobar} alt=""class="circulo2"/>
+                <p className="textoBurbuja2"></p>
+            </div>
+            <div>
+                <img src={burbujaSobrenosotros} alt=""class="circulo3"/>
+                <p className="textoBurbuja3"></p>
+            </div>
             
-        </div>
-        <div class="bfondo">
-            <div class="burbuja"></div>
         </div>
         </div>
     )

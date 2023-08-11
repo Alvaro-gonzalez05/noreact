@@ -109,6 +109,7 @@
     background-color: black;
     animation: movimiento 5s linear infinite;
 
+
 }
 .circulo2{
     height: 250px;
@@ -127,6 +128,26 @@
     animation: movimiento 5s linear infinite;
 
 }
+.circulo1:hover{
+    opacity: 50%;
+
+
+}
+.circulo2:hover{
+    opacity: 50%;
+
+}
+.circulo3:hover{
+    opacity: 50%;
+
+}
+.textoBurbuja1 {
+    position: relative;
+    z-index: 1000;
+    height: 250px;
+    width: 250px;
+
+}
 
 .b1{
     font-family: aloja;
@@ -136,6 +157,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: -6rem;
 }
 .burbuja{
     margin: 80px;
@@ -164,12 +186,12 @@
 }
 @keyframes movimiento{
     0%{
-        transform: translateY(0);
+        transform: translateY(20px);
     }
     50%{
-        transform: translateY(30px);
+        transform: translateY(-20px);
     }
     100%{
-        transform: translateY(0);
+        transform: translateY(20px);
     }
 }
