@@ -1,0 +1,105 @@
+.logogif{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+.gif{
+    width: 30%;
+    height: 30%;
+}
+.circulo1{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: black;
+    animation: movimiento 5s linear infinite;
+
+
+}
+.circulo2{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: black;
+    animation: movimiento 5s linear infinite;
+   
+    
+}
+.circulo3{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: black;
+    animation: movimiento 5s linear infinite;
+
+}
+.circulo1:hover{
+    opacity: 50%;
+
+
+}
+.circulo2:hover{
+    opacity: 50%;
+
+}
+.circulo3:hover{
+    opacity: 50%;
+
+}
+.textoBurbuja1 {
+    position: relative;
+    z-index: 1000;
+    height: 250px;
+    width: 250px;
+
+}
+
+.b1{
+    font-family: aloja;
+   
+}
+.burbujas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -6rem;
+}
+.burbuja{
+    margin: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: black;
+    opacity: .3;
+    
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    animation: burbujas 3s linear infinite;
+}
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: .4;
+
+    }
+    100%{
+        bottom: 100vh;
+    }
+}
+@keyframes movimiento{
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
