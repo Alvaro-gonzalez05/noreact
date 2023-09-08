@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Poppins&display=swap');
+
+
+
 .logogif{
     
     display: flex;
@@ -70,54 +74,55 @@
 }
 .burbuja1:hover{
     opacity: 50%;
+    scale: 1.1;
 
 }
 .burbuja2:hover{
     opacity: 50%;
+    scale: 1.1;
+
 }
 .burbuja3:hover{
     opacity: 50%;
+    scale: 1.1;
+
 }
 .burbuja1-padre{
-    border: 1px solid black;
     border-radius: 50%;
+    margin-top: -40px;
     width:350px;
     height:350px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
 }
 .burbuja2-padre{
-    border: 1px solid black;
+    
     border-radius: 50%;
+    margin-top: -40px;
     width:350px;
     height:350px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
 }
 .burbuja3-padre{
-    border: 1px solid black;
     border-radius: 50%;
+    margin-top: -40px;
     width:350px;
     height:350px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
     
-}
-@keyframes burbujas{
-    0%{
-        bottom: 0;
-        opacity: 0;
-    }
-    50%{
-        opacity: .4;
-
-    }
-    100%{
-        bottom: 100vh;
-    }
 }
 @keyframes movimiento{
     0%{
