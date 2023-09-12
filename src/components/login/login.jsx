@@ -5,6 +5,8 @@ import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
 import { BsArrowRepeat } from "react-icons/bs";
+import { BiArrowBack } from "react-icons/bi";
+import {Link} from 'react-router-dom';
 
 
 
@@ -13,7 +15,12 @@ export default function login() {
     return (
         <div className="body">
                 <div className="contenedor-form">
+                    
                     <div className="info">
+                        <div className="back">
+                            <BiArrowBack/>
+                            <Link to="/home"></Link>
+                        </div>
                         <div className="info-childs">
                             <h2>Bienvenido</h2>
                             <p>Para unirte a nuestra comunidad porfavor Inicie Sesion con sus datos</p>
@@ -32,7 +39,7 @@ export default function login() {
                                 </div>
                             </div>
                             <p>o usa tu email para registrarte</p>
-                            <form action="">
+                            <form className='form'>
                                 <label >
                                     <AiOutlineUser/>
                                     <input type="text" placeholder="Nombre de usuario"/>
