@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Poppins&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+.body_header{
+    background-color:mistyrose;
 }
 
 .menu{
     list-style: none;
     padding: 0px;
-    background: #b6b6b0;
+    background:transparent;
     max-width: 1000px;
     margin:auto;
     border-radius: 50px;
@@ -35,14 +37,14 @@
 }
 
 .Home_Barnav:hover{
-    background-color: #777574;
+    background-color:  rgba(209, 186, 184, 0.527);
 }
 .Menu_Barnav:hover{
-    background-color: #777574;
+    background-color: rgba(209, 186, 184, 0.527);
 
 }
 .staff_Barnav:hover{
-    background-color: #777574;
+    background-color: rgba(209, 186, 184, 0.527);
 
 }
 
@@ -58,7 +60,7 @@
 
 
 .Home_Barnav,.Menu_Barnav,.staff_Barnav{
-    background-color: #D9D9D9;
+    background-color: rgba(240, 216, 214, 0.527);
     border-radius: 15px;
     margin-left: 3rem;
 

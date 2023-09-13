@@ -4,7 +4,7 @@ import gift from "../../multimedia/El-sito-logo-unscreen.gif";
 
 export default function Body(){
     return(
-        <div>
+        <div className="body1">
             <div classNames="logogif">  
                 <img src={gift} alt="" className="gif"/>
             </div>

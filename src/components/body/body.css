@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Poppins&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+.body1{
+    background-color:mistyrose;
+}
 .logogif{
     
     display: flex;
@@ -41,6 +47,7 @@
 
 } */
 
+
 .burbujas{
     display: flex;
     align-items: center;
@@ -52,7 +59,6 @@
     height: 250px;
     width: 250px;
     border-radius: 50%;
-    border: 1px solid navy;
     background-image: url(../../multimedia/burbuja\ cafeteria.png);
     background-size: cover;
 }
@@ -60,7 +66,6 @@
     height: 250px;
     width: 250px;
     border-radius: 50%;
-    border: 1px solid navy;
     background-image: url(../../multimedia/Burbuja\ restobar.png);
     background-size: cover;
 }
@@ -68,23 +73,22 @@
     height: 250px;
     width: 250px;
     border-radius: 50%;
-    border: 1px solid navy;
     background-image: url(../../multimedia/burbuja\ sobre\ nosotros.png);
     background-size: cover;
 }
 .burbuja1:hover{
     opacity: 50%;
-    scale: 1.1;
+    scale: 1.05;
 
 }
 .burbuja2:hover{
     opacity: 50%;
-    scale: 1.1;
+    scale: 1.05;
 
 }
 .burbuja3:hover{
     opacity: 50%;
-    scale: 1.1;
+    scale: 1.05;
 
 }
 .burbuja1-padre{
@@ -96,7 +100,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
+    
 
 }
 .burbuja2-padre{
@@ -109,7 +113,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
 
 }
 .burbuja3-padre{
@@ -121,7 +124,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
+    
     
 }
 @keyframes movimiento{

@@ -4,7 +4,7 @@ import loginpng from "../../multimedia/Login.png";
 import {Link} from 'react-router-dom';
 export default function Header() {
     return (
-        <div>
+        <div className="body_header">
             <ul className="menu">
             <div className="barnav">
                 <li><a href="" className="Home_Barnav">Home </a></li>
