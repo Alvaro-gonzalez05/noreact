@@ -23,7 +23,7 @@ export default function login(){
                             <br/>
                             <br/>
                             <p>¿No tienes Cuenta?</p>
-                            <Link to="/register"><input type="button" value="Iniciar sesion"/></Link>
+                            <Link to="/register"><input type="button" value="Registrarse"/></Link>
                         </div>
                 </div>
                 <div className="form-info">
@@ -49,7 +49,7 @@ export default function login(){
                                     <input type="password" placeholder="Contraseña"/>
                                 </label>
                                 
-                                <input type="submit" value="Registrarse"/>
+                                <input type="submit" value="Iniciar sesion"/>
                             </form> 
                     </div>
                 </div>

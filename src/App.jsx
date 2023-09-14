@@ -3,6 +3,8 @@ import Body from './components/body/body';
 import Header from './components/hedear/header';
 import Login from './components/login/login';
 import Register from './components/register/register';
+import Cafeteria from './components/cafeteria/cafeteria';
+import Carrusel from './components/carrusel/carrusel';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
         <Route path='/register' element={<>
           
           <Register/>
+          </>
+        } />
+        <Route path='/cafeteria' element={<>
+          <Header />
+          <Carrusel />
+          <Cafeteria/>
           </>
         } />
         </Routes>

@@ -1,5 +1,6 @@
 import './body.css';
 import gift from "../../multimedia/El-sito-logo-unscreen.gif";
+import {Link} from 'react-router-dom';
 
 
 export default function Body(){
@@ -11,8 +12,7 @@ export default function Body(){
             <div className="burbujas">
                 <div className="burbuja1-padre">
                     <h1>Cafeteria</h1>
-                    <div className="burbuja1">
-                    </div> 
+                    <Link to="/cafeteria"><div className="burbuja1"></div></Link> 
                 </div>
                 <div className="burbuja2-padre">
                     <h1>Resto-Bar</h1>
