@@ -3,14 +3,14 @@ import Body from './components/body/body';
 import Header from './components/hedear/header';
 import Login from './components/login/login';
 import Register from './components/register/register';
-import Cafeteria from './components/cafeteria/cafeteria';
+import Carrito from './components/carrito/carrito';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/home' element={<>
+          <Route path='/' element={<>
           <Header />
           <Body />
           </>
@@ -25,9 +25,9 @@ function App() {
           <Register/>
           </>
         } />
-        <Route path='/cafeteria' element={<>
+        <Route path='/carrito' element={<>
           <Header />
-          <Cafeteria/>
+          <Carrito/>
           </>
         } />
         </Routes>
