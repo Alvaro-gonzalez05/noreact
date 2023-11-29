@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { dataContext } from "../context/DataContext";
+import { DataContext } from "../context/DataContext";
 
 
 const Products = () => {
-const{ data }= useContext(dataContext);
+const{data}= useContext(DataContext);
   return data.map((product)=>{ 
     return(
      <div className="card">
@@ -12,10 +12,10 @@ const{ data }= useContext(dataContext);
         <h4>{product.description} </h4>
         <h3>{product.price}$ </h3>
         <button>buy</button>
-    </div>
-        )
-    })
+      </div>
+    )
+  })
   
 }
 
-export default Products
+export default Products;

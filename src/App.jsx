@@ -1,20 +1,26 @@
 import './App.css';
 import Body from './components/body/body';
-import Header from './components/hedear/header';
+import Headernav from './components/hedear/header';
 import Login from './components/login/login';
 import Register from './components/register/register';
-import Carrito from './components/carrito/carrito';
+import { useState } from 'react';
+import { Header } from './components/carrito/headerCarrito';
+import { ProductList } from './components/carrito/productos';
+// import Carrito from './components/carrito/carrito';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
-import Products from './components/products/products';
+
 
 
 function App() {
+  const [allProducts, setAllProducts] = useState([]);
+	const [total, setTotal] = useState(0);
+	const [countProducts, setCountProducts] = useState(0);
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path='/' element={<>
-          <Header />
+          <Headernav />
           <Body />
           </>
         } />
@@ -29,13 +35,29 @@ function App() {
           </>
         } />
         <Route path='/carrito' element={<>
-          <Header />
-          <Carrito/>
+          
+          
           </>
         } />
         <Route path='/cafeteria' element={<>
-          <Header />
-          <Products/>
+          <Header 
+          allProducts={allProducts}
+          setAllProducts={setAllProducts}
+          total={total}
+          setTotal={setTotal}
+          countProducts={countProducts}
+          setCountProducts={setCountProducts}
+          />
+          <ProductList
+          allProducts={allProducts}
+          setAllProducts={setAllProducts}
+          total={total}
+          setTotal={setTotal}
+          countProducts={countProducts}
+          setCountProducts={setCountProducts}
+
+          />
+          
           </>
         } />
         </Routes>

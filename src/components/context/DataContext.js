@@ -1,11 +1,21 @@
 import { createContext, useState, useEffect } from "react";
-import axios, { Axios } from "axios";
+import axios from "axios";
+ 
 
-export const dataContext=createContext();
+export const DataContext=createContext();
+
 const DataProvider=({children})=>{
     const[data, setData]=useState([]);
 
-    useEffect(()=>{},[])
+    useEffect(()=>{
         axios.get("data.json").then((res)=> setData(res.data))
-    return <dataContext.Provider value={{data}}>{children}</dataContext.Provider>;
-}
+        
+    },[])
+    
+    return <DataContext.Provider value={data}>
+        {children}
+        </DataContext.Provider>;
+    //     axios.get("data.json").then((res)=> setData(res.data))
+    // return <dataContext.Provider value={{data}}>{children}</dataContext.Provider>;
+};
+export default DataProvider;
