@@ -5,6 +5,9 @@ import Login from './components/login/login';
 import Register from './components/register/register';
 import Carrito from './components/carrito/carrito';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
+import Products from './components/products/products';
+
+
 function App() {
   return (
     <div className="App">
@@ -28,6 +31,11 @@ function App() {
         <Route path='/carrito' element={<>
           <Header />
           <Carrito/>
+          </>
+        } />
+        <Route path='/cafeteria' element={<>
+          <Header />
+          <Products/>
           </>
         } />
         </Routes>

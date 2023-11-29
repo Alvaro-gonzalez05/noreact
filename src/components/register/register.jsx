@@ -18,7 +18,7 @@ export default function register() {
                     
                     <div className="info">
                         <div className="back">
-                            <Link to="/home"><BiArrowBack/></Link>
+                            <Link to="/"><BiArrowBack/></Link>
                         </div>
                         <div className="info-childs">
                             <h2>Bienvenido</h2>

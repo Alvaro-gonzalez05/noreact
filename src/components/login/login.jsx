@@ -13,7 +13,7 @@ export default function login(){
             <div className="contenedor-form">
                 <div className="info">
                     <div className="back1">
-                        <Link to="/home"><BiArrowBack/></Link>
+                        <Link to="/"><BiArrowBack/></Link>
                     </div>
                     <div className="info-childs">
                             <h2>Bienvenido</h2>
