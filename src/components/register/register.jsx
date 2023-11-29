@@ -7,11 +7,46 @@ import { BiLockAlt } from "react-icons/bi";
 import { BsArrowRepeat } from "react-icons/bs";
 import { BiArrowBack } from "react-icons/bi";
 import {Link} from 'react-router-dom';
-
+import axios from 'axios';
+import React, { useState } from 'react';
 
 
 
 export default function register() {
+
+    const [formData, setForm] = useState({
+        username: "",
+        email: "",
+        password: "",
+        password2: ""
+      });
+    
+      const handleChange = (e) => {
+        setForm({
+          ...formData,
+          [e.target.name]: e.target.value
+        });
+      };
+    
+      const handleRegister = async (e) => {
+        e.preventDefault();
+    
+        if (formData.password !== formData.password2) {
+          alert("Las contrasenas deben coincidir");
+        } else {
+          try {
+            await axios.post('http://localhost:8080/registro', {
+              formData
+            });
+      
+            alert("Registrado");
+          } catch (error) {
+            alert("Error al registrarse");
+            console.log("Error al registrarse ", error);
+          }  
+        }
+      };
+
     return (
         <div className="body">
                 <div className="contenedor-form">
@@ -41,23 +76,23 @@ export default function register() {
                             <form className='form'>
                                 <label >
                                     <AiOutlineUser/>
-                                    <input type="text" placeholder="Nombre de usuario"/>
+                                    <input type="text" name="username" onChange={handleChange} placeholder="Nombre de usuario"/>
                                 </label>
                                 <label >
                                     <AiOutlineMail/>
-                                    <input type="email" placeholder="Email"/>
+                                    <input type="email" name="email" onChange={handleChange} placeholder="Email"/>
                                     
                                 </label>
                                 <label >
                                     <BiLockAlt/>
-                                    <input type="password" placeholder="Contraseña"/>
+                                    <input type="password" name="password" onChange={handleChange} placeholder="Contraseña"/>
                                 </label>
                                 <label >
                                     <BsArrowRepeat/>
-                                    <input type="password" placeholder="Repetir contraseña"/>
+                                    <input type="password"name="password2" onChange={handleChange} placeholder="Repetir contraseña"/>
                                 </label>
-                                <input type="submit" value="Registrarse"/>
-                            </form> 
+                                <input type="submit" onClick={handleRegister} value="Registrarse"/>
+                            </form>     
                         </div>
                     </div>
                 </div>

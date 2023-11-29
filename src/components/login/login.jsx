@@ -3,11 +3,31 @@ import { BiArrowBack } from "react-icons/bi";
 import { SiGoogle } from "react-icons/si";
 import { AiFillPhone } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
+import axios from 'axios';
+import React, { useState } from 'react';    
 
 import { BiLockAlt } from "react-icons/bi";
 import {Link} from 'react-router-dom';
 
 export default function login(){
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        try {
+          await axios.post('http://localhost:8080/login', {
+            email,
+            password
+          });
+    
+          alert("Login exitoso");
+        } catch (error) {
+          alert("Login fallido");
+          console.log("Error al ingresar: ", error);
+        }
+    };      
     return(
         <div className="body">
             <div className="contenedor-form">
@@ -41,15 +61,15 @@ export default function login(){
                             <form className='form'>
                                 <label >
                                     <AiOutlineUser/>
-                                    <input type="text" placeholder="Nombre de usuario"/>
+                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email"/>
                                 </label>
                                 
                                 <label >
                                     <BiLockAlt/>
-                                    <input type="password" placeholder="Contraseña"/>
+                                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Contraseña"/>
                                 </label>
                                 
-                                <input type="submit" value="Iniciar sesion"/>
+                                <input type="submit" onClick={handleLogin} value="Iniciar sesion"/>
                             </form> 
                     </div>
                 </div>
