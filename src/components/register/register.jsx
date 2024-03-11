@@ -12,7 +12,7 @@ import React, { useState } from 'react';
 
 
 
-export default function register() {
+export default function Register() {
 
     const [formData, setForm] = useState({
         username: "",

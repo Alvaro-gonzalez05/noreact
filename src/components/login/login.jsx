@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import { BiLockAlt } from "react-icons/bi";
 import {Link} from 'react-router-dom';
 
-export default function login(){
+export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 

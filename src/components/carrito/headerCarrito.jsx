@@ -32,10 +32,6 @@ export const Header = ({
 		<header>
 			<div className="back1">
                 <Link to="/"><BiArrowBack/></Link>
-                <style> 
-                border-color: 1px solid black;
-
-                </style>
             </div>
             <h1>Productos De Cafeteria</h1>
 
