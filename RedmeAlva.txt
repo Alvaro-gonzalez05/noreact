@@ -1,0 +1,28 @@
+¿Cómo entiende chatGPT los prompts?
+
+//El proceso de comprensión del "prompt" por parte de ChatGPT implica el análisis del lenguaje natural,
+el reconocimiento de patrones, la inferencia contextual y el acceso a la base de conocimientos con la
+que fue entrenado. Con estos recursos, intenta generar respuestas que sean coherentes, relevantes y 
+gramaticalmente correctas según el contexto proporcionado.
+
+Dentro del algoritmo de GPT para predecir palabra tras palabra, ¿Cómo se realiza esta tarea?
+
+//Codificación de la entrada: Se convierte el texto de entrada en vectores numéricos que representan las palabras y su posición en la secuencia.
+Atención multi-cabezal: Se calcula la relevancia entre cada palabra y todas las demás en la secuencia, capturando las relaciones contextuales.
+Transformación feedforward: Se aplican capas de redes neuronales para aprender representaciones complejas de los datos.
+Normalización y conexiones residuales: Se añaden capas para estabilizar y mejorar el entrenamiento del modelo.
+Decodificación de la salida: Se calcula la probabilidad de la siguiente palabra en la secuencia utilizando una capa de proyección y una función softmax.
+Generación de la siguiente palabra: Se elige la siguiente palabra basándose en la probabilidad generada, ya sea de manera determinista o estocástica.
+Este proceso se repite hasta que se complete la secuencia o se alcance un token de finalización especial. El modelo se entrena minimizando la discrepancia
+entre las predicciones y las palabras reales en el texto de entrenamiento.
+
+¿Cómo emite respuestas chatGPT?
+
+//Recepción del prompt: ChatGPT recibe la entrada del usuario.
+Procesamiento del prompt: Se procesa la entrada utilizando una red neuronal.
+Generación de la respuesta: Se predice y genera la respuesta basada en el contexto y el conocimiento previo.
+Entrega de la respuesta: La respuesta generada se devuelve al usuario.
+
+¿A que equivale una palabra del promt?
+
+//una palabra del prompt es simplemente una unidad de texto dentro de la entrada inicial proporcionada al modelo, y su contenido y contexto son fundamentales para la generación de respuestas coherentes por parte del modelo.
