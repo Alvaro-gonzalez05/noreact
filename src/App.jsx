@@ -8,7 +8,7 @@ import { Header } from './components/carrito/headerCarrito';
 import { ProductList } from './components/carrito/productos';
 // import Carrito from './components/carrito/carrito';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
-
+import Autocomplete from './components/AUTOCOMPLETE/autocomplete';
 
 
 function App() {
@@ -27,6 +27,11 @@ function App() {
         <Route path='/login' element={<>
           
           <Login />
+          </>
+        } />
+        <Route path='/autocomplete' element={<>
+          
+          <Autocomplete />
           </>
         } />
         <Route path='/register' element={<>
