@@ -7,6 +7,7 @@
 }
 .body_header{
     background-color:mistyrose;
+    
 }
 
 .menu{
@@ -27,7 +28,7 @@
 .menu li a{
     text-decoration: none;
     color: black;
-    padding: 13px;
+    padding: 5px;
    
     
 }
@@ -73,7 +74,7 @@
     flex-grow: 1; 
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: flex-end;
    
 
@@ -89,6 +90,7 @@
 
 
 .barnav{
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
