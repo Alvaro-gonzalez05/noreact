@@ -1,56 +1,13 @@
-import './header.css';
+import * as React from 'react';
+import { useEffect } from "react";
+import {Link} from 'react-router-dom';
+import { setup } from "../ia/ia"; // Esta es la importación que causaba el error, la moví al principio
+
+import './header.css'; // Luego vienen las importaciones de estilos y recursos
 import carritopng from '../../multimedia/carrito.png';
 import loginpng from "../../multimedia/Login.png";
-import {Link} from 'react-router-dom';
-import * as React from 'react';
-// import { styled, alpha } from '@mui/material/styles';
-// import SearchIcon from '@mui/icons-material/Search';
-// import InputBase from '@mui/material/InputBase';
-import { useEffect } from "reat";
-import { setup } from "../ia/ia";
 
-// const Search = styled('div')(({ theme }) => ({
-//     position: 'relative',
-//     borderRadius: theme.shape.borderRadius,
-//     backgroundColor: alpha(theme.palette.common.white, 0.15),
-//     '&:hover': {
-//       backgroundColor: alpha(theme.palette.common.white, 0.25),
-//     },
-//     marginLeft: 0,
-//     width: '100%',
-//     [theme.breakpoints.up('sm')]: {
-//       marginLeft: theme.spacing(1),
-//       width: 'auto',
-//     },
-//   }));
-  
-//   const SearchIconWrapper = styled('div')(({ theme }) => ({
-//     padding: theme.spacing(0, 2),
-//     height: '100%',
-//     position: 'absolute',
-//     pointerEvents: 'none',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   }));
-  
-//   const StyledInputBase = styled(InputBase)(({ theme }) => ({
-//     color: 'inherit',
-//     width: '100%',
-//     '& .MuiInputBase-input': {
-//       padding: theme.spacing(1, 1, 1, 0),
-//       // vertical padding + font size from searchIcon
-//       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-//       transition: theme.transitions.create('width'),
-//       [theme.breakpoints.up('sm')]: {
-//         width: '12ch',
-//         '&:focus': {
-//           width: '20ch',
-//         },
-//       },
-//     },
-//   }));
-
+// Aquí puedes dejar el resto de tu código, como las definiciones de componentes y funciones
 export default function Header() {
   useEffect(() => {
     setup()
@@ -68,15 +25,8 @@ export default function Header() {
         
     
             <div className="iconos">
-                <Search>
-                    <SearchIconWrapper>
-                        <SearchIcon />
-                    </SearchIconWrapper>
-                    <StyledInputBase>
-                        placeholder="Search…"
-                        inputProps={{ 'aria-label': 'search' }}
-                    </StyledInputBase>
-                </Search>
+                <input type="text" placeholder="Search ..." id="filled-basic" />
+                <span id="pred_labels"></span>
                 <li className="liDerecha"><Link to="/carrito"><img src={carritopng} alt="" className="carritoImg" /></Link></li>
                 <li className="liDerecha"><Link to="/login"><img src={loginpng}alt="" className="loginImg" /></Link></li>
             </div>
